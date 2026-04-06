@@ -1,6 +1,11 @@
 
 import streamlit as st
+import pandas as pd
 import pickle
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+# Page Config
+st.set_page_config(page_title="Spam Classifier | Ayush Developer")
 
 # 1. Load the saved model and vectorizer
 model = pickle.load(open('spam_model.pkl', 'rb'))
